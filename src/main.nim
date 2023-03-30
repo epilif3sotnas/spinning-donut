@@ -1,3 +1,7 @@
+# std
+import
+    std/threadpool
+
 # internal
 import
   ./shapes/[
@@ -22,22 +26,24 @@ proc main() =
   let drawer = newDrawer()
 
   # Draw Cube
-  drawer.drawObject(cube)
+  spawn drawer.drawObject(cube)
 
   # Draw Cuboid
-  drawer.drawObject(cuboid)
+  spawn drawer.drawObject(cuboid)
 
   # Draw Cylinder
-  drawer.drawObject(cylinder)
+  spawn drawer.drawObject(cylinder)
 
   # Draw Donut
-  drawer.drawObject(donut)
+  spawn drawer.drawObject(donut)
 
   # Draw Sphere
-  drawer.drawObject(sphere)
+  spawn drawer.drawObject(sphere)
 
   # Draw SquarePyramid
-  drawer.drawObject(squarePyramid)
+  spawn drawer.drawObject(squarePyramid)
+
+  sync()
 
 when isMainModule:
   main()
