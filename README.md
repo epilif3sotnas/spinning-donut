@@ -1,4 +1,4 @@
-## About spinning-donut
+## About spinning-objects
 
 This repository was built with the goal to replicate the spinning donut described in this [link](https://www.a1k0n.net/2011/07/20/donut-math.html) and also use the knowledge that I gain from that to build with spinning objects with other shapes like Sphere, Cube, Cuboid, Cylinder and Square-based Pyramid.
 
